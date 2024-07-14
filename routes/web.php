@@ -20,10 +20,7 @@ use Illuminate\Validation\Rules\Enum;
 */
 
 Route::get('/', function () {
-    $enum = AcademicSubjectEnum::from(AcademicSubjectEnum::getValueByKey('Biology'));
-
-
-    dd($enum);
+    dd(config('services.bitrix24.rest_url'));
 });
 
 

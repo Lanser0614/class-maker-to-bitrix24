@@ -16,7 +16,7 @@ class Bitrix24HttpRepository
     private function baseRequest(string $method, array $params = []): Response
     {
         return Http::timeout(20)
-            ->post('https://centralasian.bitrix24.ru/rest/10/ihycxmlttn320zcs/' . $method, $params);
+            ->post(config('services.bitrix24.rest_url') . $method, $params);
     }
 
     public function getDealByPassportNumber(string $passportNumber): BitrixResponseDTO

@@ -31,4 +31,7 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'bitrix24' => [
+        'rest_url' => env('BITRIX24_REST_URL'),
+    ]
 ];
