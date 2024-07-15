@@ -6,7 +6,7 @@ namespace App\DTO;
 class ClasMakerWebhookDTO
 {
 
-    private ?string $date;
+    private ?string $date = null;
 
 
 
