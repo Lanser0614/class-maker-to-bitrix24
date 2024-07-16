@@ -15,7 +15,7 @@ class ClasMakerWebhookDTO
         public readonly string $firstName,
         public readonly string $lastName,
         public readonly string $email,
-        public readonly int $percentage,
+        public readonly float $percentage,
         public readonly string $passportNumber,
     )
     {
@@ -63,7 +63,7 @@ class ClasMakerWebhookDTO
         return $this->email;
     }
 
-    public function getPercentage(): int
+    public function getPercentage(): float
     {
         return $this->percentage;
     }

@@ -108,7 +108,7 @@ class Bitrix24HttpRepository
         return BitrixResponseOnCreateEntityDTO::fromArray($response);
     }
 
-    public function addCommentToTimeLineToDeal(string $dealId, AcademicSubjectEnum $enum,  int $percentage): Response
+    public function addCommentToTimeLineToDeal(string $dealId, AcademicSubjectEnum $enum,  float $percentage): Response
     {
         return $this->baseRequest("crm.timeline.comment.add", [
             'fields' => [

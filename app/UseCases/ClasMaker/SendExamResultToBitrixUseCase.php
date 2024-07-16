@@ -51,7 +51,7 @@ class SendExamResultToBitrixUseCase
         $enum = AcademicSubjectEnum::from(AcademicSubjectEnum::getValueByKey($subjectName));
 
         try {
-            $oldResult = (int)$deal->getResult()[$enum->value];
+            $oldResult = (float)$deal->getResult()[$enum->value];
         } catch (Exception $e) {
             return $e->getMessage();
         }

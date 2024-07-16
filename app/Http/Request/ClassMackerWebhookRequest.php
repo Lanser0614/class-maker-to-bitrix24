@@ -14,7 +14,7 @@ class ClassMackerWebhookRequest extends FormRequest
             'result.first' => ['nullable', 'string'],
             'result.last' => ['nullable', 'string'],
             'result.email' => ['nullable', 'email'],
-            'result.percentage' => ['nullable', 'integer'],
+            'result.percentage' => ['nullable'],
             'result.extra_info_answer' => ['nullable', 'string'],
         ];
     }
