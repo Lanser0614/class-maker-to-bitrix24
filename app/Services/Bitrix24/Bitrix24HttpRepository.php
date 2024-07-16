@@ -9,6 +9,7 @@ use App\Enum\AcademicSubjectEnum;
 use App\Services\Bitrix24\Response\BitrixResponseDTO;
 use App\Services\Bitrix24\Response\BitrixResponseOnCreateEntityDTO;
 use Illuminate\Http\Client\Response;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Http;
 
 class Bitrix24HttpRepository
@@ -118,11 +119,11 @@ class Bitrix24HttpRepository
         ]);
     }
 
-    public function updateDealDate(string $dealId, string $date): Response
+    public function updateDealDate(string $dealId, ?string $date): Response
     {
         return $this->baseRequest('crm.deal.update', [
             'ID' => $dealId,
-            'fields' => ['UF_CRM_1719688190448' => $date]
+            'fields' => ['UF_CRM_1719688190448' => Carbon::parse($date)->format('Y-m-d H:i:s')]
         ]);
     }
 
